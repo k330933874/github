@@ -1,0 +1,66 @@
+1  五大类型
+string   hash   list     set     zset
+
+判断values类型   用type  （key）
+
+hash :
+	hest   hget
+	hkeys  
+	hvals
+	hgetall
+	hdel
+
+string:
+	set   get  del
+	incr   decr
+	incrby    decrby
+	incrbyfloat
+	getrange
+	append
+
+list : 双向链表
+	lpush  rpush
+	lrange
+	lpop   rpop
+	llen
+
+
+获取页面源码
+1 requests
+2 beautifulsoup bs4
+3 scrapy
+
+set  : 集合
+	sadd 增加数据 spop 随机删除数据
+
+zset : 有序集合
+	zadd
+	zscore key memer
+	zrange 
+	zrevrange
+
+
+
+习题 ： 登录(redis+pymysql)
+1 pip install redis
+
+2 连接mysql 
+
+3 连接redis
+import redis
+redis.Redis()
+
+4 获取姓名密码参数 
+python xxx.py  argv1 argv2
+import sys
+sys.argv[1]
+
+5 访问redis , 判断输入的姓名和密码与redis 中保存的用户名密码是否一致
+
+6 和redis 不匹配，则查询mysql,select操作
+
+7 mysql有查询结果的话，则更新到Redis中,反之则没有该用户
+
+
+
+习题2 订阅，消费者，发布者
